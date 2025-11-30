@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-hard: 4px 4px 0px 0px #000000;
+  --shadow-hard-sm: 2px 2px 0px 0px #000000;
+  --shadow-hard-lg: 8px 8px 0px 0px #000000;
+}
+
+:root {
+  /* Comic Chaos Theme */
+  --background: #fffdf5;
+  /* Off-white paper */
+  --foreground: #000000;
+  /* Pure black */
+
+  --primary: #ff6b6b;
+  /* Hot Pink */
+  --primary-foreground: #000000;
+
+  --secondary: #feca57;
+  /* Bright Yellow */
+  --secondary-foreground: #000000;
+
+  --muted: #c8d6e5;
+  /* Muted Blue */
+  --muted-foreground: #000000;
+
+  --accent: #48dbfb;
+  /* Cyan */
+  --accent-foreground: #000000;
+
+  --destructive: #ff9f43;
+  /* Orange */
+  --destructive-foreground: #000000;
+
+  --border: #000000;
+  /* Black borders */
+  --input: #ffffff;
+  --ring: #000000;
+
+  --radius: 0.5rem;
+  /* Slightly rounded */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Keep it bright even in dark mode for this style, or invert slightly */
+    --background: #222f3e;
+    --foreground: #ffffff;
+
+    --primary: #ff6b6b;
+    --primary-foreground: #000000;
+
+    --secondary: #feca57;
+    --secondary-foreground: #000000;
+
+    --muted: #576574;
+    --muted-foreground: #ffffff;
+
+    --accent: #48dbfb;
+    --accent-foreground: #000000;
+
+    --border: #ffffff;
+    /* White borders in dark mode */
+    --input: #222f3e;
+    --ring: #ffffff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-comic-neue), cursive, sans-serif;
+  border: 4px solid var(--border);
+  /* Global border */
+  min-height: 100vh;
+}
+
+/* Utilities for Neo-Brutalism */
+.border-hard {
+  border: 3px solid var(--border);
+}
+
+.shadow-hard {
+  box-shadow: 4px 4px 0px 0px var(--border);
+}
+
+.shadow-hard-hover:hover {
+  box-shadow: 2px 2px 0px 0px var(--border);
+  transform: translate(2px, 2px);
+}
+
+.section-padding {
+  @apply py-24 md:py-32;
+}
