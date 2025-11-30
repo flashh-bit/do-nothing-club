@@ -43,10 +43,10 @@ export default function RootLayout({
         <ExitIntentModal />
         <Toaster position="bottom-center" toastOptions={{
           style: {
-            background: 'var(--background)',
+            background: '#ffffff',
             color: '#000000',
-            border: '3px solid var(--border)',
-            boxShadow: '4px 4px 0px 0px var(--border)',
+            border: '3px solid #000000',
+            boxShadow: '4px 4px 0px 0px #000000',
             fontFamily: 'var(--font-comic-neue)',
             borderRadius: '0.5rem',
           },
