@@ -95,8 +95,8 @@ export function Skills() {
                             <div className="h-12 w-12 rounded-none bg-white border-2 border-black flex items-center justify-center mb-6 text-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                                 <skill.icon size={24} strokeWidth={2} />
                             </div>
-                            <h3 className="text-2xl font-black mb-3 text-foreground uppercase">{skill.title}</h3>
-                            <p className="text-foreground font-bold leading-relaxed">
+                            <h3 className="text-2xl font-black mb-3 text-black uppercase">{skill.title}</h3>
+                            <p className="text-black font-bold leading-relaxed">
                                 {skill.description}
                             </p>
                         </div>

@@ -5,7 +5,7 @@ import { RoastController } from "@/components/RoastController";
 import { CookieBanner } from "@/components/CookieBanner";
 import { ProductivityToggle } from "@/components/ProductivityToggle";
 import { ExitIntentModal } from "@/components/ExitIntentModal";
-
+import { ShoutOut } from "@/components/ShoutOut";
 import { LazySoundboard } from "@/components/LazySoundboard";
 import { LazyLoader } from "@/components/LazyLoader";
 import { DoNothingChallenge } from "@/components/DoNothingChallenge";
@@ -35,6 +35,7 @@ export default function RootLayout({
         <LazyLoader />
         <LazySoundboard />
         <DoNothingChallenge />
+        <ShoutOut />
         <RoastController />
         {children}
         <CookieBanner />
@@ -43,7 +44,7 @@ export default function RootLayout({
         <Toaster position="bottom-center" toastOptions={{
           style: {
             background: 'var(--background)',
-            color: 'var(--foreground)',
+            color: '#000000',
             border: '3px solid var(--border)',
             boxShadow: '4px 4px 0px 0px var(--border)',
             fontFamily: 'var(--font-comic-neue)',
