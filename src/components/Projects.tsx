@@ -61,7 +61,7 @@ export function Projects() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 md:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
                     {projects.map((project, index) => (
                         <Link
                             href={project.link}

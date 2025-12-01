@@ -76,12 +76,12 @@ export function Skills() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {skills.map((skill, index) => (
                         <div
                             key={index}
                             className={cn(
-                                "p-4 md:p-8 border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200 group cursor-pointer relative",
+                                "p-8 border-3 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200 group cursor-pointer relative",
                                 skill.className
                             )}
                             onClick={() => handleSkillClick(skill)}
