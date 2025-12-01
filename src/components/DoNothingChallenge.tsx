@@ -72,7 +72,7 @@ export function DoNothingChallenge() {
     }, [time, highScore]);
 
     return (
-        <div className="fixed top-24 right-4 z-40 flex flex-col items-end gap-2 pointer-events-none select-none">
+        <div className="hidden md:flex fixed top-24 right-4 z-40 flex-col items-end gap-2 pointer-events-none select-none">
             {/* Main Timer */}
             <div className="bg-white border-3 border-black px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-black text-sm text-black flex items-center gap-3 rotate-1 animate-in slide-in-from-right duration-500">
                 <div className={`w-3 h-3 rounded-full border-2 border-black ${time > 0 ? "bg-green-500 animate-pulse" : "bg-red-500"}`} />
