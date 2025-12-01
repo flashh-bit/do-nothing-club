@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, BookX, Armchair, Flame, Headphones } from "lucide-react";
 import { toast } from "sonner";
 
 const projects = [
@@ -10,25 +10,29 @@ const projects = [
         title: "The Novel I Started in 2018",
         description: "It has a great first sentence. I'm letting it marinate.",
         link: "#",
-        color: "bg-pink-200"
+        color: "bg-pink-200",
+        icon: BookX
     },
     {
         title: "Gym Membership (Unused)",
         description: "A monthly donation to a local business I never visit.",
         link: "#",
-        color: "bg-green-200"
+        color: "bg-green-200",
+        icon: Armchair
     },
     {
         title: "Duolingo Streak (Lost)",
         description: "I missed one day and decided to give up on French forever.",
         link: "#",
-        color: "bg-yellow-200"
+        color: "bg-yellow-200",
+        icon: Flame
     },
     {
         title: "Meditation App Subscription",
         description: "I use it to fall asleep, which counts as mindfulness, right?",
         link: "#",
-        color: "bg-purple-200"
+        color: "bg-purple-200",
+        icon: Headphones
     },
 ];
 
@@ -65,13 +69,13 @@ export function Projects() {
                             className="group block"
                             onClick={handleProjectClick}
                         >
-                            <div className={`relative aspect-[4/3] ${project.color} border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mb-6 flex items-center justify-center group-hover:translate-x-[2px] group-hover:translate-y-[2px] group-hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all`}>
-                                {/* Placeholder for project image */}
+                            <div className={`relative aspect-[4/3] ${project.color} border-3 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] mb-6 flex items-center justify-center group-hover:translate-x-[2px] group-hover:translate-y-[2px] group-hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden`}>
+                                {/* Icon for project */}
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="text-foreground text-5xl font-black opacity-20 rotate-12">Fig. {index + 1}</span>
+                                    <project.icon size={120} strokeWidth={1.5} className="text-black opacity-80 rotate-12 group-hover:rotate-0 transition-transform duration-300" />
                                 </div>
-                                <div className="absolute top-4 left-4 bg-white text-black border-2 border-black px-2 py-1 font-bold text-xs uppercase">
-                                    Status: Abandoned
+                                <div className="absolute top-4 left-4 bg-white text-black border-2 border-black px-2 py-1 font-bold text-xs uppercase z-10">
+                                    Fig {index + 1}. Status: Abandoned
                                 </div>
                             </div>
                             <div className="flex items-start justify-between bg-white text-black border-2 border-black p-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1 group-hover:rotate-0 transition-transform">
